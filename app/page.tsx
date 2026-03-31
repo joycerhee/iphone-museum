@@ -18,8 +18,8 @@ export default function Home() {
           <p className="mt-3 text-zinc-500 text-sm">Trusted by 2.3 billion users across 57 countries.</p>
           <div className="mt-6">
             <a
-              href="#timeline"
-              className="inline-block bg-black text-white px-5 py-3 rounded-md text-sm font-semibold shadow-sm"
+              href="/timeline"
+              className="inline-block bg-black text-white border border-black px-5 py-3 rounded-md text-sm font-semibold"
             >
               Explore the Timeline
             </a>
