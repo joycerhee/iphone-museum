@@ -116,3 +116,10 @@ a {
     padding: 2.5rem;
   }
 }
+
+.text-chrome {
+  background: linear-gradient(180deg, #ffffff 0%, #b8b8b8 40%, #4a4a4a 70%, #d8d8d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
