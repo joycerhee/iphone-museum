@@ -15,6 +15,7 @@ const people = [
 ];
 
 export default function PeoplePage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [flipped, setFlipped] = useState<number | null>(null);
 
   return (
@@ -47,7 +48,7 @@ export default function PeoplePage() {
               {/* Front */}
               <div className="absolute inset-0 backface-hidden rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-black p-10 flex flex-col justify-between hover:border-zinc-600 transition-colors">
                 <div>
-                  <img src={`/people-images/${p.img}`} alt={p.name} className="w-24 h-24 rounded-full object-cover ring-1 ring-zinc-700" />
+                  <img src={`${basePath}/people-images/${p.img}`} alt={p.name} className="w-24 h-24 rounded-full object-cover ring-1 ring-zinc-700" />
                   <h2 className="mt-6 text-4xl font-extrabold text-chrome">{p.name}</h2>
                   <p className="mt-2 text-zinc-400">{p.role}</p>
                   <p className="mt-1 text-sm font-mono text-zinc-600">{p.years}</p>

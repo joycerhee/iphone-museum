@@ -21,6 +21,7 @@ function AppleLogo({ className = '', style }: { className?: string; style?: Reac
 }
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
 
@@ -211,7 +212,7 @@ export default function Home() {
         <div className="relative max-w-5xl mx-auto px-6 grid md:grid-cols-[auto_1fr] items-center gap-16">
           <div className="relative group">
             <div className="absolute -inset-3 rounded-full bg-chrome-radial blur-md opacity-70 group-hover:opacity-100 transition-all duration-700 animate-spin-slow" />
-            <img src="/people-images/steve-jobs.jpg" alt="Steve Jobs" className="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover ring-1 ring-white/20" />
+            <img src={`${basePath}/people-images/steve-jobs.jpg`} alt="Steve Jobs" className="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover ring-1 ring-white/20" />
           </div>
           <div>
             <p className="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-4">The Visionary</p>
@@ -249,7 +250,7 @@ export default function Home() {
               <Link key={era.title} href={era.href} className="group relative block">
                 <article className="relative bg-black rounded-2xl overflow-hidden border border-white/10 group-hover:border-white/40 h-full transition-all duration-500 group-hover:translate-y-[-4px]">
                   <div className="relative h-56 overflow-hidden">
-                    <img src={era.img} alt={era.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={`${basePath}${era.img}`} alt={era.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-xs tracking-widest">{era.year}</div>
                   </div>
                   <div className="p-8">

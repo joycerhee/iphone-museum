@@ -40,6 +40,7 @@ const transitionText: Record<number, string> = {
 };
 
 export function HomeMuseum() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const shouldReduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const progressScale = useTransform(scrollYProgress, [0, 1], [0.04, 1]);
@@ -127,7 +128,7 @@ export function HomeMuseum() {
                 >
                   <div className={`grid grid-cols-1 items-center gap-8 md:grid-cols-2 ${isEven ? 'md:grid-flow-col-dense' : ''}`}>
                     <motion.img
-                      src={`/images/iphones/${era.image}`}
+                      src={`${basePath}/images/iphones/${era.image}`}
                       alt={`iPhone ${era.title}`}
                       className={`rounded-2xl max-h-[280px] object-contain ${isEven ? 'md:order-2' : ''}`}
                       style={{ y: shouldReduceMotion ? 0 : imageParallax }}

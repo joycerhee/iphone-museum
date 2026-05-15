@@ -16,6 +16,7 @@ const innovations = [
 ];
 
 export default function InnovationsPage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const scrollRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
@@ -64,7 +65,7 @@ export default function InnovationsPage() {
               active === i ? 'border-zinc-500 scale-100 opacity-100' : 'border-zinc-900 scale-90 opacity-50'
             }`}
           >
-            <img src={`/breakthrough-images/${it.image}`} alt={it.name} className="absolute inset-0 w-full h-full object-cover" />
+            <img src={`${basePath}/breakthrough-images/${it.image}`} alt={it.name} className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-10">
               <p className="text-xs font-mono text-zinc-400 tracking-widest">{it.year} · {it.model}</p>
