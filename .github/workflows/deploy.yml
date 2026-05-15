@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /117Museum
+      NEXT_PUBLIC_BASE_PATH: /iphone-museum
     steps:
       - name: Checkout
         uses: actions/checkout@v4
