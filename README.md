@@ -1,7 +1,6 @@
 # iPhone Evolution Museum
 
-🔗 **Live Site:** [link here]
-📁 **Repository:** [link here]
+**Live Site:** https://joycerhee.github.io/iphone-museum/ 
 
 ## Museum Concept
 A digital museum exhibit tracing the evolution of Apple's iPhone from 2007 to 2025. The exhibit explores how changes in design, technology, and functionality shaped modern communication and culture. Visitors are guided through a curated experience across six exhibit rooms: a cinematic lobby, a scrolling timeline, the visionaries behind the iPhone, key technological breakthroughs, cultural impact moments, and a look at the present day and future.
